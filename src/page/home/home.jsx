@@ -32,7 +32,6 @@ export const Homes = () => {
       <button  names="Click" onClick={update}>Click me</button>
       <ButtonHome functionOnClick={update2} names="Click" />
       <ButtonHome functionOnClick={updateJokes} names="Click to get Joke" />
-      <GlobalButton />
     </>
   )
 }
