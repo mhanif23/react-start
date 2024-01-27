@@ -1,6 +1,7 @@
 import { ButtonHome } from "./components/buttonHome"
 import React, { useState } from 'react';
 import { getJoke } from "../../model/jokeapi"
+import { ResponsiveAppBar } from "../../components/navigation/"
 
 
 export const Homes = () => {
@@ -22,6 +23,7 @@ export const Homes = () => {
   }
   return (
     <>
+      <ResponsiveAppBar />
       <div>{jokes? jokes : "Tidak ada jokes"}</div>
       <div>{number}</div>
       <div>{count}</div>
@@ -30,6 +32,7 @@ export const Homes = () => {
       <button  names="Click" onClick={update}>Click me</button>
       <ButtonHome functionOnClick={update2} names="Click" />
       <ButtonHome functionOnClick={updateJokes} names="Click to get Joke" />
+      <GlobalButton />
     </>
   )
 }
